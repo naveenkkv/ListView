@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements ListView.OnItemCl
         setContentView(R.layout.activity_main);
         ListView listView = (ListView)findViewById(R.id.listView);
         myResArray = getResources().getStringArray(R.array.item_list);
-        //List<String> stringList = Arrays.asList(myResArray);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myResArray);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
