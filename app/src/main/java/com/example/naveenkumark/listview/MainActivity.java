@@ -2,6 +2,7 @@ package com.example.naveenkumark.listview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ListView.OnItemClickListener {
+    private static final String TAG = MainActivity.class.getSimpleName() + "lihlk";
     private ArrayAdapter<String> adapter;
     private  String[] myResArray;
 
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements ListView.OnItemCl
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myResArray);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
-
+        Log.d(TAG, "dsfsadfsxccc: ");
     }
 
     @Override
